@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import Items, VisitedLinks
+from .views import VisitedDomains, VisitedLinks
 
 
 urlpatterns = [
-    path('items/', Items.as_view()),
+    path('visited_domains/', VisitedDomains.as_view()),
     path('visited_links', VisitedLinks.as_view()),
 ]
