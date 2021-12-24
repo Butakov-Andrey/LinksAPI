@@ -16,7 +16,7 @@ Web-приложения для учета посещенных ссылок
   ...\> docker pull redis
   ...\> docker run --name myredis -p 6379:6379 -d redis
   ```
-2. Клонируем репозиторий и заходим в директорию:
+1. Клонируем репозиторий и заходим в директорию:
   ```
   ...\> git clone https://github.com/Butakov-Andrey/LinksAPI.git
   ...\> cd LinksAPI
@@ -43,8 +43,13 @@ Web-приложения для учета посещенных ссылок
 Документация API:
 * Swagger - http://127.0.0.1:8000/swagger/
 * Redoc - http://127.0.0.1:8000/redoc/
-### Создание пользователя:
-* URL - http://127.0.0.1:8000/api/v1/dj-rest-auth/registration/
+### Загрузка посещений:
+* URL - http://127.0.0.1:8000/api/visited_links
+* curl:
+  ```
+  ...\> curl -X POST -H "Content-Type: application/json" -d "{"""links""": ["""dh.com""","""https://github.com/Butakov-Andrey"""]}" http://127.0.0.1:8000/api/visited_links
+  ```
+
 ### Авторизация пользователя:
 * URL - http://127.0.0.1:8000/api/v1/dj-rest-auth/login/
 ### Создание опроса:
