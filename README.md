@@ -11,7 +11,12 @@ Web-приложения для учета посещенных ссылок
 * Redis
 * Docker
 ## Установка и запуск:
-1. Клонируем репозиторий и заходим в директорию:
+0. Запускаем Redis в контейнере Docker:
+  ```
+  ...\> docker pull redis
+  ...\> docker run --name myredis -p 6379:6379 -d redis
+  ```
+2. Клонируем репозиторий и заходим в директорию:
   ```
   ...\> git clone https://github.com/Butakov-Andrey/PollAPI.git
   ...\> cd PollAPI
