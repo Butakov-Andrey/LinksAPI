@@ -30,7 +30,7 @@ class VisitedDomains(APIView):
                     },
                     status=status.HTTP_400_BAD_REQUEST
                 )
-            if len(time_from) != 10 or len(time_to):
+            if len(time_from) != 10 or len(time_to) != 10:
                 return Response(
                     data={
                         "Error": "Check parameter values (10 digits)",
