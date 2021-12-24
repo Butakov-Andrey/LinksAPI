@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 import tldextract
 import redis
 
-redis_instance = redis.StrictRedis(
+redis_instance = redis.Redis(
     host='localhost',
     charset="utf-8",
     decode_responses=True
@@ -105,6 +105,6 @@ class VisitedLinks(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
         return Response(
-            data={'links': item, 'status': status.HTTP_201_CREATED},
+            data={'status': status.HTTP_201_CREATED},
             status=status.HTTP_201_CREATED
         )
