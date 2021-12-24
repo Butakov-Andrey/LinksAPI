@@ -18,8 +18,8 @@ Web-приложения для учета посещенных ссылок
   ```
 2. Клонируем репозиторий и заходим в директорию:
   ```
-  ...\> git clone https://github.com/Butakov-Andrey/PollAPI.git
-  ...\> cd PollAPI
+  ...\> git clone https://github.com/Butakov-Andrey/LinksAPI.git
+  ...\> cd LinksAPI
   ```
 2. Создаем виртуальное окружение и активируем его:
   ```
@@ -30,21 +30,11 @@ Web-приложения для учета посещенных ссылок
   ```
   ...\> pip install -r requirements.txt
   ```
-4. Создаем миграции:
+4. Запускаем миграции:
   ```
-  ...\> manage.py makemigrations polls
   ...\> manage.py migrate
   ```
-5. Создаем суперпользователя:
-  ```
-  ...\> manage.py createsuperuser
-  Username (leave blank to use 'admin'): admin
-  Email address: admin@admin.com
-  Password: ********
-  Password (again): ********
-  Superuser created successfully.
-  ```
-6. Запускаем приложение:
+5. Запускаем приложение:
   ```
   ...\> manage.py runserver
   ```
